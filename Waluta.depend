@@ -1,0 +1,31 @@
+# depslib dependency file v1.0
+1489250607 source:d:\proi - c++\waluta\main.cpp
+	"operator.h"
+	<iostream>
+	<vector>
+	<algorithm>
+
+1489252325 d:\proi - c++\waluta\operator.h
+	<string>
+
+1489250491 source:d:\proi - c++\waluta\operator.cpp
+	<iostream>
+	"operator.h"
+
+1489615969 source:c:\users\user\desktop\c++\waluta\main.cpp
+	"operator.h"
+	<iostream>
+	<vector>
+	<algorithm>
+	<iomanip>
+
+1489615434 c:\users\user\desktop\c++\waluta\operator.h
+	<iomanip>
+	<string>
+	<iostream>
+
+1489616026 source:c:\users\user\desktop\c++\waluta\operator.cpp
+	<iostream>
+	<iomanip>
+	"operator.h"
+
