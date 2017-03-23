@@ -1,4 +1,5 @@
-#include "operator.h"
+#include "CurrencyOperator.h"
+#include "WalletOperator.h"
 #include <iostream>
 #include <vector>
 #include <algorithm>

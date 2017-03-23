@@ -4,14 +4,17 @@ CPPFLAGS = --std=c++11 -Wall -Werror -DBOOST_TEST_DYN_LINK
 LINKFLAGS = --std=c++11 -lboost_unit_test_framework
 
 lib_SOURCES = \
-	operator.cpp \
-	operator.h
+	WalletOperator.cpp \
+	WalletOperator.h\
+	CurrencyOperator.cpp\
+	CurrencyOperator.h
 
 lib_OBJECTS=$(lib_SOURCES:.cpp=.o)
 
 tests_SOURCES = \
 	tests_main.cpp \
-	tests.cpp
+	CurrencyTests.cpp\
+	WalletTests.cpp
 
 tests_OBJECTS=$(tests_SOURCES:.cpp=.o)
 
@@ -22,7 +25,7 @@ app_OBJECTS=$(app_SOURCES:.cpp=.o)
 
 tests_EXECUTABLE = tests_bin
 
-all: calc tests
+all: wallet  tests
 
 %.o : %.c
 	$(CXX) -c $(CPPFLAGS) $< -o $@
@@ -33,7 +36,7 @@ $(tests_EXECUTABLE): $(tests_OBJECTS) $(lib_OBJECTS)
 tests: $(tests_EXECUTABLE)
 	./$(tests_EXECUTABLE)
 
-calc: $(lib_OBJECTS) $(app_OBJECTS)
+wallet: $(lib_OBJECTS) $(app_OBJECTS)
 	$(CXX) -o $@ $(app_OBJECTS) $(lib_OBJECTS) $(LINKFLAGS)
 
 .PHONY: clean tests
