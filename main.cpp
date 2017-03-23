@@ -8,9 +8,9 @@ using namespace std;
 
 int main()
 {
-  vector <Currency> cantor;
-  int decision;
-  char next;
+  //vector <Currency> cantor;
+  //int decision;
+  //char next;
   Currency example, example2, example3;
 
   /*
@@ -25,16 +25,21 @@ int main()
   }
   */
 
-  example.exchange=1.2;
   example.name="euro";
   example.shortcut="EUR";
-  example2.exchange=2.8;
-  example2.name="zloty";
-  example2.shortcut="PLN";
-  //example*=example2;
+  example.exchange=100;
+  example2.name="funt";
+  example2.shortcut="GPB";
+  example2.exchange=450;
 
-  //example.Show();
-  cin>>example3;
-  //cout<<example<<example2;
+  Wallet w1 = Wallet(example, 100);
+  Wallet w2 = Wallet(example2, 1000);
+
+  Wallet w3;
+
+  example3=example*2;
+  example3+=1;
+  cout<<example3;
+
   return 0;
 }
