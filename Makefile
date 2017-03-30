@@ -4,17 +4,19 @@ CPPFLAGS = --std=c++11 -Wall -Werror -DBOOST_TEST_DYN_LINK
 LINKFLAGS = --std=c++11 -lboost_unit_test_framework
 
 lib_SOURCES = \
-	WalletOperator.cpp \
-	WalletOperator.h\
-	CurrencyOperator.cpp\
-	CurrencyOperator.h
+	Wallet.h\
+	Wallet.cpp\
+	Currency.h\
+	Currency.cpp
+	
 
 lib_OBJECTS=$(lib_SOURCES:.cpp=.o)
 
 tests_SOURCES = \
 	tests_main.cpp \
-	CurrencyTests.cpp\
-	WalletTests.cpp
+	WalletTests.cpp\
+	CurrencyTests.cpp
+	
 
 tests_OBJECTS=$(tests_SOURCES:.cpp=.o)
 
